@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestTaskAPI</name>
+    </assembly>
+    <members>
+        <member name="M:TestTaskAPI.Controllers.AuthorizationController.RegisterUser(TestTaskAPI.Data.UserRegistrationModel)">
+            <summary>
+            Creates a new user and adding it to DB
+            </summary>
+            <param name="user"></param>
+            <returns>token or BadRequest</returns>
+        </member>
+        <member name="M:TestTaskAPI.Controllers.AuthorizationController.Authenticate(TestTaskAPI.Controllers.UserCredsModel)">
+            <summary>
+            Authentication by login and password
+            </summary>
+            <param name="creds"></param>
+            <example>{"name": "string","login": "string"}</example>
+            <returns>token or unauthorized</returns>
+        </member>
+        <member name="T:TestTaskAPI.Controllers.UsersController">
+            <summary>
+            Controller for CRUD operations with users in DB
+            </summary>
+        </member>
+        <member name="M:TestTaskAPI.Controllers.UsersController.GetAllUsers">
+            <summary>
+            Returns names and logins of all registred users
+            </summary>
+            <returns>List of all users in DB</returns>
+        </member>
+        <member name="M:TestTaskAPI.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Returns specific user by his Id in DB
+            </summary>
+            <param name="id">Id of user in DB</param>
+            <returns>Name and login of specified user or NotFound</returns>
+        </member>
+        <member name="M:TestTaskAPI.Controllers.UsersController.PutUser(TestTaskAPI.User)">
+            <summary>
+            Update user
+            </summary>
+            <param name="user"></param>
+            <returns>updated user</returns>
+        </member>
+        <member name="M:TestTaskAPI.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Delete user
+            </summary>
+            <param name="id"></param>
+            <returns>NotFound or NoContent, if succsesfully deleted</returns>
+        </member>
+    </members>
+</doc>
